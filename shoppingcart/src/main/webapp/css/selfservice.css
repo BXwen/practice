@@ -1,0 +1,132 @@
+/*
+ * ATTENTION DEVELOPERS: DEFINING OWN STYLES IS RESERVED FOR EXCEPTIONAL CASES ONLY FOR ANYTHING THAT IS NOT COVERED BY nges.css
+ * ALWAYS RELY IN WHAT IS PROVIDED IN nges.css (RESP. BOOSTRAP ON WHICH IT IS BASED) AND REPORT FINDINGS WHERE YOU HAD TO EXPLICTLY
+ * OVERWRITE / EXTEND EXISTING STYLES FROM THE nges.css LIBRARY IN ORDER TO TO SOMETHING "THE STANDARD" WAY
+ */
+
+/* Add * to required labels see http://stackoverflow.com/questions/23141854/adding-asterisk-to-required-fields-in-bootstrap-3 */
+.form-group.required .control-label:after {   content:" *";  }
+
+/* Cover odd and even rows (TEMPORARY) */
+tr.grayed{
+    background-color: #f7f7f7;
+}
+
+tr.nocolor{
+   background-color: #ffffff;
+}
+
+/* Misnamed and Missing flags from nges lib */
+
+/* Angular Validation specific style classes */
+input.ng-invalid.ng-dirty {
+    background: url(../img/assets.png) no-repeat top left;
+    background-position: right -32px;
+    background-color: #ffe5e5;
+    border-color: #ff0000;
+}
+
+textarea.ng-invalid.ng-dirty {
+/*  comment out coz when enlarging the textarea it displays incorrectly
+    background: url(../img/assets.png) no-repeat top left;
+    background-position: right -32px; */
+    background-color: #ffe5e5;
+    border-color: #ff0000;
+}
+
+/* Stylecalss for AUTOCOMPLETE widget */
+.autocomplete{
+    width: 100%;
+    position: relative;
+}
+
+.autocomplete input{
+    font-size: 1.2em;
+    width: 100%;
+    padding:0.4em;
+}
+
+.autocomplete ul{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-left: 1px solid #888;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    z-index: 1;
+}
+
+.autocomplete li{
+    text-align: left;
+    list-style:none;
+    width: 100%;
+    padding:0.4em;
+    background-color: #fff;
+}
+
+.autocomplete li.active{
+    width: 100%;
+    background-color: #4bf;
+}
+
+.autocomplete .highlight {
+    background-color: #E2E2E2;
+}
+
+.autocomplete li.active .highlight {
+    background: #666;
+    color: #fff;
+}
+
+.ovh {
+    overflow:hidden;
+}
+
+.msgMargin{
+    margin-bottom: 0px;
+}
+
+.ahidden{
+    display : none;
+}
+
+.ashow{
+    display : block;
+}
+
+.supportform-hotline {
+    height: 24px;
+    line-height: 25px;
+}
+
+.supportform-flag-position {
+    width: 24px;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}
+
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+/* start: for print directive */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printSection, #printSection * {
+        visibility: visible;
+    }
+
+    #printSection {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* end: for print directive */

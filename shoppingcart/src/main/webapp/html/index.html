@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="AngularSpringApp">
+<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <title>Shopping Cart</title>
+    <meta name="description" content="Shopping Cart">
+    <meta name="author" content="SSC Java Team">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="../css/app.css"/>
+    <link rel="stylesheet" href="../css/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../css/shopping_cart/goods-list.css" />
+    <link rel="stylesheet" href="../css/shopping_cart/shopping-cart.css" />
+
+</head>
+<body>
+
+    <article class="content-top"><!-- class="f-content" -->
+        <!-- Menu End -->
+        <div ng-view=""></div>
+    </article>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-resource/angular-resource.js"></script>
+<script src="../bower_components/angular-route/angular-route.min.js"></script>
+<script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+
+<!--<script src="../app/phones/phone-detail-controller.js"></script>
+<script src="../app/phones/phone-list-controller.js"></script>-->
+
+<script src="../app/shopping_cart/goods-list-controller.js"></script>
+<script src="../app/shopping_cart/product-list-mvc-service.js"></script>
+<script src="../app/shopping_cart/shopping-cart-controller.js"></script>
+<script src="../app/shopping_cart/goods-detail-controller.js"></script>
+<script src="../app/shopping_cart/wish-list-controller.js"></script>
+<script src="../app/app.js"></script>
+
+</body>
+</html>

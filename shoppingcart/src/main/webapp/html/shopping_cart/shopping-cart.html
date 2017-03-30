@@ -1,0 +1,97 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-6 col-md-3"></div>
+        <div class="shopping_procedure col-sm-8 col-md-4">
+            <span class="current" style="margin: 0 0 0 -15px;">我的购物车</span>
+            <span>填写订单</span>
+            <span>完成订单</span>
+        </div>
+    </div>
+    <div class="row">
+        <div id="cart" class="col-sm-20 col-md-10">
+            <table class="table-striped user_font">
+                <thead>
+                <tr>
+                    <td>
+                        <div class="row" class="table-header">
+                            <div class="col-md-1 col1">
+                                <input type="checkbox" name="chkAllProducts" id="chkAllProducts" ng-model="chkAll"
+                                              ng-click="chkSelectAll(!chkAll)">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="chkAllProducts">Select All</label>
+                            </div>
+                            <div class="col-md-4"><label>Product Name</label></div>
+                            <div class="col-md-1"><label>Price</label></div>
+                            <div class="col-md-1"><label>Count</label></div>
+                            <div class="col-md-1"><label>Subtotal</label></div>
+                            <div class="col-md-2"><label>Operation</label></div>
+                        </div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in shoppingCart.items" class="tr_color">
+                        <td>
+                            <div class="row">
+                                <div class="col-md-1 row-height">
+                                    <div class="checkbox-position"><input type="checkbox" name="chkProduct" ng-model="item.checked"></div>
+                                </div>
+                                <div class="col-md-2 row-content">
+                                    <a href="#/goodsDetail/{{item.product.productId}}">
+                                        <img ng-src="{{item.product.thumb}}" />
+                                    </a>
+                                </div>
+                                <div class="col-md-4 row_name">
+                                    <a ng-href="#/goodsDetail/{{item.product.productId}}"><span>{{item.product.name}}</span></a>
+                                </div>
+                                <div class="col-md-1 row-content">
+                                    <span id="productPrice">{{item.product.price | currency}}</span>
+                                </div>
+                                <div class="col-md-1 row-content">
+                                    <input type="number" id="productCount" class="form-control" ng-model="item.productCount" min="1"
+                                           ng-minlength="1" ng-keydown="$event.preventDefault()"
+                                           ng-keypress="$event.preventDefault()" validate-number="item.productCount" ng-change="updateShoppingCart(item)">
+                                </div>
+                                <div class="col-md-1 row-content">
+                                    <span id="itemTotalPrice">{{item.totalPrice | currency}}</span>
+                                </div>
+                                <div class="col-md-2 row-content">
+                                    <span class="span-block"><a href="" ng-click="moveCartItemToWishList(item)">
+                                        <small>Move to Wish List</small>
+                                    </a></span>
+                                    <span class="span-block"><a href="" ng-click="deleteCartItem(item)">
+                                        <small>Delete</small>
+                                    </a></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="row user_font">
+        <div class="col-sm-2 col-md-1 chk-padding col1"><input type="checkbox" name="chkAllProducts" class="checkbox-center" id="selectAll2" ng-model="chkAll"
+                       ng-click="chkSelectAll(!chkAll)">
+        </div>
+        <div><label for="selectAll2" class="col-sm-2 col-md-1">Select All</label></div>
+        <div class="col-sm-4 col-md-2"><a href="" ng-click="batchDelete()">Batch Delete</a></div>
+        <div class="col-md-offset-3 col-sm-6 col-md-3 row-bottom-line">
+            <p><span class="">Subtotal({{shoppingCart.totalCount}} items)</span>&nbsp;&nbsp;{{shoppingCart.totalCost | currency}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-7 col-md-3">
+            <p class="user_font"><span class="">Subtotal({{shoppingCart.totalCount}} items)</span>&nbsp;&nbsp;<span class="red-font">{{shoppingCart.totalCost | currency}}</span></p>
+
+            <div class="last-btn">
+                <button type="button" class="btn btn-warning" style="width: 100%">
+                    Proceed to checkout
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-5"><a href="#/goodslist">back to product list</a></div>
+    </div>
+</div>

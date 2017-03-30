@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8">
+            <form class="form-inline has-error">
+                <div class="input-group">
+                    <div class="form-group">
+                        <input type="text" id="searchBox" ng-model="searchTxt" class="form-control" placeholder="AngularJS">
+                        <button type="button" class="btn input-group-addon form-control btn-danger">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-2">
+            <button type="button" class="btn btn-danger" ng-click="goToShoppingCart()">
+                Shopping Cart&nbsp;<span class="badge" ng-show="shoppingCart.totalCount > 0">{{shoppingCart.totalCount}}</span>
+            </button>
+        </div>
+
+        <div class="col-md-2">
+            <button type="button" class="btn btn-danger" ng-click="goToWishList()">
+                Wish List&nbsp;<span class="badge" ng-show="wishList.length > 0">{{wishList.length}}</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="top col-md-9">
+            <table class="table table-hover">
+                <thead>
+                </thead>
+                <tbody>
+                <tr class="row" ng-repeat="product in productList | filter:searchTxt">
+                    <td id="td_product">
+                        <div class="line-padding">
+                            <div class="col-sm-6 col-md-3">
+                                <a ng-href="#/goodsDetail/{{product.productId}}" alt="{{product.name}}">
+                                    <img class="img-thumbnail image-style" ng-src="{{product.full}}" rendered="true">
+                                </a>
+                            </div>
+                            <div class="col-sm-12 col-md-8">
+                                <p><a ng-href="#/goodsDetail/{{product.productId}}" class="char-font"> {{product.name}} </a><br />
+                                <small>by {{product.authors}}</small></p>
+                                <p class="red-font ">{{product.price | currency}}</p>
+                                <div class="product-desc-size">{{product.description}}</div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-3"><input type="button" class="btn btn-warning" value="Add to Cart"
+                                                                          ng-click="addToShoppingCart(product);"/></div>
+                                    <div class="col-sm-4 col-md-2">
+                                        <input type="button" class="btn btn-success" value="Add to Wish List" ng-click="addToWishList(product)" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+        <!--<div class="row" ng-repeat="product in productList | filter:searchTxt">
+            <div class="col-sm-6 col-md-3">
+                <a ng-href="{{product.full}}" alt="{{product.name}}">
+                    <img class="img-thumbnail image-style" ng-src="{{product.full}}" rendered="true">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <p><a ng-href="../html/#/goodsDetail/{{product.productId}}" class="char-font"> {{product.name}} </a></p>
+
+                <div class="col-sm-4 col-md-2"><input type="button" class="btn btn-warning" value="Add to Cart"
+                                                      ng-click="addToShoppingCart(product);"/></div>
+                <div class="col-sm-4 col-md-2"><input type="button" class="btn btn-success" value="Save for later"/></div>
+            </div>
+        </div>-->
+    </div>
+
+</div>

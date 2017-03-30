@@ -1,0 +1,90 @@
+[
+  {
+    "productId": "1001",
+    "name": "AngularJS: Up and Running: Enhanced Productivity with Structured Web Apps",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/23358634-1_b_4.jpg",
+      "thumb": "../images/23358634-1_m.jpg"
+    },
+    "price": 28.88,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  },
+  {
+    "productId": "1002",
+    "name": "Mastering Web Application Development with AngularJS",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/23587516-1_b_1.jpg",
+      "thumb": "../images/23587516-1_m.jpg"
+    },
+    "price": 29.24,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  },
+  {
+    "productId": "1003",
+    "name": "Pro AngularJS (Expert's Voice in Web Development)",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/23751084-1_b_1.jpg",
+      "thumb": "../images/23751084-1_m.jpg"
+    },
+    "price": 29.24,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  },
+  {
+    "productId": "1004",
+    "name": "Learning AngularJS: A Guide to AngularJS Development",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/23815176-1_b_6.jpg",
+      "thumb": "../images/23815176-1_m.jpg"
+    },
+    "price": 29.24,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  },
+  {
+    "productId": "1005",
+    "name": "Thinking in Java (4th Edition)",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/9317290-1_b_0.jpg",
+      "thumb": "../images/9317290-1_m.jpg"
+    },
+    "price": 29.24,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  },
+  {
+    "productId": "1006",
+    "name": "Core Java Volume I--Fundamentals (10th Edition) (Core Series)",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/23362142-1_b_0.jpg",
+      "thumb": "../images/23362142-1_m.jpg"
+    },
+    "price": 29.24,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  },
+  {
+    "productId": "1007",
+    "name": "Object-Oriented JavaScript, 2nd Edition",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/23637615-1_b_1.jpg",
+      "thumb": "../images/23637615-1_m.jpg"
+    },
+    "price": 29.24,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  },
+  {
+    "productId": "1008",
+    "name": "JavaScript Patterns 1st Edition",
+    "authors": "Shyam Seshadri and Brad Green",
+    "images": {
+      "full": "../images/23266635-1_b_1.jpg",
+      "thumb": "../images/23266635-1_m.jpg"
+    },
+    "price": 29.24,
+    "description": "AngularJS is the leading framework for building dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. AngularJS, which is maintained by Google, brings the power of the Model-View-Controller (MVC) pattern to the client, providing the foundation for complex and rich web apps. "
+  }
+]

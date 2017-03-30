@@ -1,0 +1,41 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>
+                    <div class="row line-padding table-header">
+                        <div class="col-md-6 col1"><label>Product Info.</label></div>
+                        <div class="col-md-1 col1"><label>Price</label></div>
+                        <div class="col-md-2 col1"><label>Operation</label></div>
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+        </tr>
+        <tr ng-repeat="wishItem in wishList.list">
+            <td>
+                <div class="row">
+                    <div class="col-md-2 col1">
+                        <input type="checkbox" name="chkProduct" ng-model="wishItem.checked"/>
+                        <a><img ng-src="/images/{{wishItem.product.images.thumb}}"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <p><a ng-href="#/goodsDetail/{{wishItem.product.product_id}}"><span>{{wishItem.product.name}}</span></a>
+                        </p>
+
+                        <p>Collected Time: {{wishItem.collectedTime | date: 'MM/dd/yyyy'}}</p>
+                    </div>
+                    <div class="col-md-1 col1">{{wishItem.product.price}}</div>
+                    <div class="col-md-2 col1">
+                        <button type="button" class="btn btn-warning" ng-click="moveToCart(wishItem)">Move to Cart</button>
+                        <br/>
+                        <a ng-click="deleteWishItem(wishItem)" href="">Delete</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

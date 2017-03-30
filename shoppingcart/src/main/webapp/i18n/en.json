@@ -1,0 +1,70 @@
+{
+    "webapp": {
+        "NAME": "Report Web Form",
+        "tagline": "J2EE Framework",
+        "version": "Version 1.0.0"
+        },
+   	"company": {
+        "name": "DB Schenker",
+        "url": "http://www.google.com"
+        },
+    "user": {
+        "status": "Logged in as:",
+        "logout": "Logout"
+        },
+    "menu": {
+        "home": "SIMS Self-Service",
+        "register": "Register",
+        "myprofile": "My Profile",
+        "change-password": "Change Password",
+        "set-password": "Set Password",
+        "challenge-response": "Answer Personal Questions",
+        "accesses": "My Accesses",
+        "activities": "My Activities",
+        "sign-in": "Sign in",
+        "sign-out": "Sign out",
+        "recover-sign-in-data": "Recover Sign in Data",
+        "reset-password": "Reset my password",
+        "recover-sims-id": "Get my DB Schenker ID by mail",
+        "support": "Open Support Call",
+        "reset-password-by-questions": "Reset Password by Questions",
+        "admin": {
+            "home": "Administration",
+            "config": "Manage Configuration",
+            "console": "Admin Console",
+            "build": "Build Information",
+            "logger": "Logging Configuration"
+        },
+        "test": "Test Page (dev)",
+        "language": "Language",
+        "quick-access": "QUICK ACCESS",
+        "technical-problems": "Technical Problems",
+        "contact-form": "Contact Form",
+        "hotline": "Hotline",
+        "privacy": "Privacy",
+        "imprint": "Legal",
+        "gtc": "GTC",
+        "gtc#remark": "Abreviation for General Terms and Conditions",
+        "access-denied": "Access Denied",
+        "not-found": "Page not Found",
+        "external": {
+            "WWNGES": "eSchenker",
+            "WWPOR" : "DB Schenker Portal"
+        }
+    },
+    "load" : {
+  		"static" : {
+   		"TITLE" : "How to load static files?",
+    	"HEADER" : "The module can lazzy load a translations table when it's needed.",
+    	"SUBHEADER" : "So, you can load only those languages, which will be used.",
+    	"TEXT" : "This is only some text to fill the space.",
+    	"ONLY_EN": "only english",
+    	"EN_RU": "EN and RU - EN Edition"
+  	},
+  		"predefined" : {
+    	"TITLE" : "How to use lazzy loading without autoupload?",
+    	"HEADER" : "You can predefine a default language while still using a lazzy loading.ailian",
+    	"SUBHEADER" : "This way module will not load a default language from server once more."
+    }
+  }
+}

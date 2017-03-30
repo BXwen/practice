@@ -1,0 +1,165 @@
+/**/
+
+.shopping_procedure {
+    width: 634px;
+    height: 36px;
+    background: url(../../images/procedure_bg.png);
+    font: bold 14px/36px "Microsoft Yahei";
+    color: #646464;
+    margin: 30px 0 0;
+    text-align: right;
+}
+
+.shopping_procedure span.current {
+    color: #fff;
+    width: 206px;
+}
+
+.shopping_procedure span {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+.amount {
+    border: 1px solid #FFFFFF;
+    height: 28px;
+    width: 94px;
+    line-height: 28px;
+    font-size: 14px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+.amount a {
+    display: block;
+    float: left;
+    height: 28px;
+    width: 28px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.amount input {
+    width: 36px;
+    height: 28px;
+    line-height: 28px \9;
+    float: left;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    border-width: 0 1px;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.row_name {
+    width: 324px;
+    line-height: 18px;
+    text-align: left;
+    position: relative;
+    padding-top: 17px;
+}
+
+.row-content {
+    text-align: left;
+    line-height: 18px;
+    position: relative;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.span-block {
+    display: block;
+}
+
+.col3 {
+    width: 144px;
+    padding: 0 20px 0;
+}
+
+.col4 {
+    width: 132px;
+    padding: 0 25px 0;
+}
+
+.col5 {
+    width: 100px;
+    padding: 5px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #969696;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
+
+.red {
+    color: red;
+}
+
+.row-bottom-line {
+    border-bottom: 1px solid;
+    border-bottom-color: grey;
+}
+
+.last-btn {
+    padding: 0 50px 0 0;
+
+}
+
+.head-left {
+    padding-left: 15px;
+}
+#cart {
+    margin-top: 1em;
+    background-color: #FAFAFA;
+
+}
+.tr_color {
+    background-color: white;
+}
+.user_font {
+    font: 14px/36px "Microsoft Yahei";
+}
+.col1 {
+    text-align: center;
+}
+.checkbox-position {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 166px;
+}
+a span {
+    color: black;
+}
+a span:hover {
+    color: red;
+}
+thead td {
+    text-align: center;
+}
+.row-height {
+    height:166px;
+}
+.tr-padding {
+    padding: 10px 0 10px 0;
+}
+.checkbox-center {
+    text-align: center;
+}
+.table-header {
+    background-color: #F5F5F5;
+}
+.input-width {
+    width: 50px;
+}

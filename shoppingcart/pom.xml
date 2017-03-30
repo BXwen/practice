@@ -1,0 +1,282 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.springapp.mvc.shoppingcart</groupId>
+    <artifactId>shoppingcart</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>ShoppingCart</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <spring.version>3.2.13.RELEASE</spring.version>
+        <!-- Hibernate 3.2 requires JPA 1.0, needed @ WAS7 -->
+        <org.hibernate.version>3.2.1.ga</org.hibernate.version>
+        <org.slf4j.version>1.7.13</org.slf4j.version>
+        <org.hibernate_annotation.version>3.2.0.ga</org.hibernate_annotation.version>
+        <org.hibernate_commons_annotation.version>3.2.0.Final</org.hibernate_commons_annotation.version>
+        <javax.servlet-api.version>2.5</javax.servlet-api.version>
+        <jetty-maven-plugin.version>8.1.16.v20140903</jetty-maven-plugin.version>
+        <jetty-grp>org.mortbay.jetty</jetty-grp>
+        <jetty-cnf-dir>${basedir}/src/profile/</jetty-cnf-dir>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- other plugin versions -->
+        <version.ear.plugin>2.6</version.ear.plugin>
+        <!-- <version.ejb.plugin>2.3</version.ejb.plugin> -->
+        <version.surefire.plugin>2.10</version.surefire.plugin>
+        <version.war.plugin>2.1.1</version.war.plugin>
+
+        <!-- maven-compiler-plugin -->
+        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+
+
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- Spring Jdbc is suddenly marked as provided by spring-orm -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.0.3.RELEASE</version>
+        </dependency>
+
+
+
+        <!--  ================ START Hibernate 3 ================== -->
+
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+
+
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${org.hibernate.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>xml-apis</artifactId>
+                    <groupId>xml-apis</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.transaction</groupId>
+                    <artifactId>jta</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>${org.hibernate_annotation.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>${org.hibernate_commons_annotation.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <version>${org.hibernate.version}</version>
+           <!-- <exclusions>
+                <exclusion>
+                    <groupId>javax.transaction</groupId>
+                    <artifactId>jta</artifactId>
+                </exclusion>
+            </exclusions>-->
+        </dependency>
+
+        <!--<dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${org.slf4j.version}</version>
+        </dependency>-->
+        <!--  ================ END Hibernate 3 ================== -->
+
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <compilerArgs>
+                        <arg>-verbose</arg>
+                        <arg>-Xlint:unchecked</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${version.war.plugin}</version>
+                <configuration>
+                    <!-- Java EE 6 doesn't require web.xml, Maven needs to catch up! -->
+                    <failOnMissingWebXml>true</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+
+                <!-- <groupId>org.eclipse.jetty</groupId> -->
+                <groupId>${jetty-grp}</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty-maven-plugin.version}</version>
+
+
+                <configuration>
+
+                    <jettyXml>${jetty-cnf-dir}/jetty.xml</jettyXml>
+                    <webAppSourceDirectory>${basedir}/webapp</webAppSourceDirectory>
+
+                    <webApp>
+                        <contextPath>/</contextPath>
+                        <defaultsDescriptor>${basedir}/src/profile/webdefault.xml</defaultsDescriptor>
+                        <descriptor>${basedir}/WEB-INF/web.xml</descriptor>
+
+                        <jettyEnvXml></jettyEnvXml>
+                    </webApp>
+
+                    <classesDirectory>${project.basedir}/target/classes</classesDirectory>
+
+
+                    <stopKey/>
+                    <stopPort/>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>jetty-run</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
+
+
+        </plugins>
+    </build>
+</project>

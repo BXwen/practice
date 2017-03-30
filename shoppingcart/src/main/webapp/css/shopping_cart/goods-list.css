@@ -1,0 +1,43 @@
+/**/
+
+.content-top {
+    margin-top: 20px;
+}
+.char-font {
+    color: #1A66B3;
+}
+.search-btn {
+    margin-left:-30px;
+}
+.btn-border {
+    border: 1px solid darkred;
+}
+a:hover {
+    text-decoration: underline;
+    color: #ee5f5b;
+}
+.image-style {
+    width: 200px;
+    height: 200px;
+}
+#searchBox {
+    width:500px;
+}
+.top {
+    margin: 30px 100px 0 0;
+}
+.line-padding {
+    margin: 10px 0 10px 0;
+}
+.red-font {
+    color: red;
+}
+.product-desc-size {
+    height: 60px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#td_product {
+    border-top: none;
+}
